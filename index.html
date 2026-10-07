@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>picha.dev — the desk</title>
+  <meta name="description" content="An interactive 3D desk: click around to explore Picha's work." />
+  <meta name="theme-color" content="#050807" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="stage" aria-label="Interactive 3D desk"></canvas>
+
+  <div id="pins" aria-hidden="false"></div>
+
+  <header id="hud" class="hidden">
+    <a class="brand" href="#" id="brand"><span class="dot"></span><span>picha<span class="tld">.dev</span></span></a>
+    <div class="hud-right">
+      <button id="mood" class="chip" aria-label="Toggle lights">☀ Lights on</button>
+    </div>
+  </header>
+
+  <nav id="index" class="hidden" aria-label="Desk index"></nav>
+  <p id="hint" class="hidden">drag to orbit &nbsp;·&nbsp; click anything glowing &nbsp;·&nbsp; type on your keyboard</p>
+  <div id="toast" role="status"></div>
+
+  <aside id="panel" aria-hidden="true">
+    <button id="close" aria-label="Close">esc ✕</button>
+    <p class="kicker" id="p-kicker"></p>
+    <h2 id="p-title"></h2>
+    <div id="p-body"></div>
+    <ul id="p-items"></ul>
+  </aside>
+
+  <section id="intro">
+    <div class="intro-inner">
+      <p class="kicker">picha.dev · interactive desk</p>
+      <h1>Welcome to<br />my desk.</h1>
+      <p class="sub">A tiny 3D room with everything I make. Click objects, fly around, press some keys.</p>
+      <button id="enter" class="enter"><span class="key">⏎</span> Wake the desk</button>
+      <p class="loading" id="loading">loading scene…</p>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
